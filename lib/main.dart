@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider_udemy/providers/cart.dart';
+import 'package:flutter_provider_udemy/providers/products.dart';
+import 'package:flutter_provider_udemy/screens/product_detail_Screen.dart';
+import 'package:flutter_provider_udemy/screens/product_overview_screens.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -13,9 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-
+        ChangeNotifierProvider.value(value: Cart(),),
+        ChangeNotifierProvider.value(value: Products()),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           // This is the theme of your application.
@@ -30,7 +36,10 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.purple,
           accentColor: Colors.deepOrange,
         ),
-       // home: const PoductsOverviewScreen(),
+        home: const ProductsOverviewScreen(),
+        routes: {
+          ProductDetaiilScreen.routeName:(ctx)=> ProductDetaiilScreen(),
+        },
       ),
     );
   }

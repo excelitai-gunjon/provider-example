@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider_udemy/screens/cart_screen.dart';
 import 'package:flutter_provider_udemy/widgets/app_drawer.dart';
 import 'package:flutter_provider_udemy/widgets/products_grid.dart';
 import 'package:provider/provider.dart';
@@ -64,7 +65,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
               ),
               onPressed: () {
                 FlutterBeep.beep();
-                //Navigator.of(context).pushNamed(CartScreen.routeName);
+                Navigator.of(context).pushNamed(CartScreen.routeName);
               },
             ),
           ),

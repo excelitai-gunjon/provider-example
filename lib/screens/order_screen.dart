@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 class OrderScreen extends StatelessWidget {
   const OrderScreen({Key? key}) : super(key: key);
 
+  static const routeName = '/orders';
   @override
   Widget build(BuildContext context) {
     final orderData = Provider.of<Orders>(context);

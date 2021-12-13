@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider_udemy/screens/order_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.payment),
             title: Text('Orders'),
             onTap: (){
-              //Navigator.of(context).pushReplacementNamed(routeName)
+              Navigator.of(context).pushReplacementNamed(OrderScreen.routeName);
             },
           )
         ],

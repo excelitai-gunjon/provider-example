@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_udemy/providers/cart.dart';
+import 'package:flutter_provider_udemy/providers/home_state.dart';
 import 'package:flutter_provider_udemy/providers/orders.dart';
 import 'package:flutter_provider_udemy/providers/products.dart';
 import 'package:flutter_provider_udemy/screens/cart_screen.dart';
@@ -7,7 +8,7 @@ import 'package:flutter_provider_udemy/screens/order_screen.dart';
 import 'package:flutter_provider_udemy/screens/product_detail_Screen.dart';
 import 'package:flutter_provider_udemy/screens/product_overview_screens.dart';
 import 'package:provider/provider.dart';
-
+import 'package:dcdg/dcdg.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider.value(value: Orders()),
         ChangeNotifierProvider.value(value: Cart(),),
         ChangeNotifierProvider.value(value: Products(),),
+        ChangeNotifierProvider.value(value: HomeState()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

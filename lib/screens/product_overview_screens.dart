@@ -4,7 +4,7 @@ import 'package:flutter_provider_udemy/screens/cart_screen.dart';
 import 'package:flutter_provider_udemy/widgets/app_drawer.dart';
 import 'package:flutter_provider_udemy/widgets/products_grid.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_beep/flutter_beep.dart';
+//import 'package:flutter_beep/flutter_beep.dart';
 
 import 'package:flutter_provider_udemy/providers/cart.dart';
 import 'package:flutter_provider_udemy/widgets/badge.dart';
@@ -64,7 +64,7 @@ class ProductsOverviewScreen extends StatelessWidget {
                 Icons.shopping_cart,
               ),
               onPressed: () {
-                FlutterBeep.beep();
+                //FlutterBeep.beep();
                 Navigator.of(context).pushNamed(CartScreen.routeName);
               },
             ),

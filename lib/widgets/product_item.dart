@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_beep/flutter_beep.dart';
+//import 'package:flutter_beep/flutter_beep.dart';
 import 'package:flutter_provider_udemy/providers/cart.dart';
 import 'package:flutter_provider_udemy/providers/product.dart';
 import 'package:flutter_provider_udemy/screens/product_detail_Screen.dart';
@@ -17,7 +17,7 @@ class ProductItem extends StatelessWidget {
       child: GridTile(
         child: GestureDetector(
           onTap: () {
-            FlutterBeep.beep();
+            //FlutterBeep.beep();
            Navigator.of(context).pushNamed(
              ProductDetaiilScreen.routeName,
              arguments: product.id,
@@ -37,7 +37,7 @@ class ProductItem extends StatelessWidget {
               ),
               color: Theme.of(context).accentColor,
               onPressed: () {
-                FlutterBeep.beep();
+                //FlutterBeep.beep();
                 product.toggleFavoriteStatus();
               },
             ),
@@ -51,7 +51,7 @@ class ProductItem extends StatelessWidget {
               Icons.shopping_cart,
             ),
             onPressed: (){
-              FlutterBeep.playSysSound(41);
+              //FlutterBeep.playSysSound(41);
               cart.addItem(product.id!, product.price!, product.title!);
             },
             color: Theme.of(context).accentColor,

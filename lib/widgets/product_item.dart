@@ -18,10 +18,10 @@ class ProductItem extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             //FlutterBeep.beep();
-           Navigator.of(context).pushNamed(
-             ProductDetaiilScreen.routeName,
-             arguments: product.id,
-           );
+            Navigator.of(context).pushNamed(
+              ProductDetaiilScreen.routeName,
+              arguments: product.id,
+            );
           },
           child: Image.network(
             product.imageUrl!,
@@ -31,7 +31,7 @@ class ProductItem extends StatelessWidget {
         footer: GridTileBar(
           backgroundColor: Colors.black87,
           leading: Consumer<Product>(
-            builder: (ctx,product,_)=> IconButton(
+            builder: (ctx, product, _) => IconButton(
               icon: Icon(
                 product.isFavorite ? Icons.favorite : Icons.favorite_border,
               ),
@@ -50,9 +50,22 @@ class ProductItem extends StatelessWidget {
             icon: Icon(
               Icons.shopping_cart,
             ),
-            onPressed: (){
+            onPressed: () {
               //FlutterBeep.playSysSound(41);
               cart.addItem(product.id!, product.price!, product.title!);
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Added item to cart!'),
+                  duration: Duration(seconds: 2),
+                  backgroundColor: Colors.grey,
+                  action: SnackBarAction(
+                    label: 'UNDO',
+                    onPressed: (){
+
+                    },
+                  ),
+                ),
+              );
             },
             color: Theme.of(context).accentColor,
           ),

@@ -5,9 +5,9 @@ import 'package:intl/intl.dart';
 import 'package:flutter_provider_udemy/providers/orders.dart'as ord;
 
 class OrderItem extends StatefulWidget {
+
   final ord.OrderItem order;
   OrderItem(this.order);
-
   @override
   _OrderItemState createState() => _OrderItemState();
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider_udemy/screens/cart_screen.dart';
 
 class Badge extends StatelessWidget {
   const Badge({
@@ -17,21 +18,26 @@ class Badge extends StatelessWidget {
       alignment: Alignment.center,
       children: [
         child,
-        Container(
-          padding: EdgeInsets.all(2.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            color: color != null?color : Theme.of(context).accentColor,
-          ),
-          constraints: BoxConstraints(
-            maxWidth: 16,
-            minHeight: 16
-          ),
-          child: Text(
-            value,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 10,
+        GestureDetector(
+          onTap: (){
+            Navigator.of(context).pushNamed(CartScreen.routeName);
+          },
+          child: Container(
+            padding: EdgeInsets.all(2.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              color: color != null?color : Theme.of(context).accentColor,
+            ),
+            constraints: BoxConstraints(
+              maxWidth: 16,
+              minHeight: 16
+            ),
+            child: Text(
+              value,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 10,
+              ),
             ),
           ),
         )

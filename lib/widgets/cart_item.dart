@@ -66,29 +66,40 @@ class CartItem extends StatelessWidget {
           context: context,
           builder: (context) => AlertDialog(
             title: Text('Are you sure'),
-            content: Text(
-              "Do you want to remove the item from the cart",
+            content: SizedBox(
+              height: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Do you want to remove the item from the cart",
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.purple
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pop(false);
+                        },
+                        child: Text('No'),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.purple
+                        ),
+                        onPressed: (){
+                          Navigator.of(context).pop(true);
+                        },
+                        child: Text("Yes"),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
-            actions: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.lightBlueAccent
-                ),
-                onPressed: () {
-                  Navigator.of(context).pop(false);
-                },
-                child: Text('No'),
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.lightBlueAccent
-                ),
-                onPressed: (){
-                  Navigator.of(context).pop(true);
-                },
-                child: Text("Yes"),
-              ),
-            ],
           ),
         );
       },

@@ -62,6 +62,7 @@ class ProductsOverviewScreen extends StatelessWidget {
             child: IconButton(
               icon: Icon(
                 Icons.shopping_cart,
+                color: Theme.of(context).secondaryHeaderColor,
               ),
               onPressed: () {
                 //FlutterBeep.beep();

@@ -35,7 +35,7 @@ class ProductItem extends StatelessWidget {
               icon: Icon(
                 product.isFavorite ? Icons.favorite : Icons.favorite_border,
               ),
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).primaryColor,
               onPressed: () {
                 //FlutterBeep.beep();
                 product.toggleFavoriteStatus();
@@ -49,6 +49,7 @@ class ProductItem extends StatelessWidget {
           trailing: IconButton(
             icon: Icon(
               Icons.shopping_cart,
+              //color: Colors.teal,
             ),
             onPressed: () {
               // cart.addItem(product.id, product.price, product.title);
@@ -86,7 +87,7 @@ class ProductItem extends StatelessWidget {
                 ),
               );
             },
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).primaryColor,
           ),
         ),
       ),

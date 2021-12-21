@@ -84,7 +84,7 @@ class ProductItem extends StatelessWidget {
                       cart.removeSingleItem(product.id!);
                     },
                   ),
-                ),
+                ),//
               );
             },
             color: Theme.of(context).primaryColor,

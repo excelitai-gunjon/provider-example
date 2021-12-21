@@ -38,25 +38,35 @@ class _OrderItemState extends State<OrderItem> {
           if (_expanded)
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 4),
-              height: min(widget.order.product.length * 20.0 + 10, 100),
+              height: max(widget.order.product.length * 20.0 + 10, 100),
               child: ListView(
                 children: widget.order.product
                     .map(
                       (prod) => Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text(
-                        prod.title!,
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                      Expanded(
+                        flex: 1,
+                        child: Text(
+                          prod.title!,
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      Text(
-                        '${prod.quantity}x \$${prod.price}',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.grey,
+                      Expanded(
+                        flex: 1,
+                        child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            '${prod.quantity}x \$${prod.price}',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.grey,
+                            ),
+                          ),
                         ),
                       )
                     ],

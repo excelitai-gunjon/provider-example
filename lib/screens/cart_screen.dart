@@ -73,7 +73,7 @@ class CartScreen extends StatelessWidget {
               //   // cart.items.keys.toList()[i],
               // ),
             ),
-          )
+          ),
         ],
       ),
     );

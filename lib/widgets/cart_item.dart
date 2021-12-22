@@ -78,18 +78,12 @@ class CartItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.purple
-                        ),
                         onPressed: () {
                           Navigator.of(context).pop(false);
                         },
                         child: Text('No'),
                       ),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.purple
-                        ),
                         onPressed: (){
                           Navigator.of(context).pop(true);
                         },

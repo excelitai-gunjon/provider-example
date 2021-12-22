@@ -22,7 +22,9 @@ class UserProductItem extends StatelessWidget {
         child: Row(
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+
+              },
               icon: Icon(Icons.edit),
               color: Theme.of(context).primaryColor,
             ),

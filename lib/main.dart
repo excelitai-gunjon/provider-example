@@ -4,6 +4,7 @@ import 'package:flutter_provider_udemy/providers/home_state.dart';
 import 'package:flutter_provider_udemy/providers/orders.dart';
 import 'package:flutter_provider_udemy/providers/products.dart';
 import 'package:flutter_provider_udemy/screens/cart_screen.dart';
+import 'package:flutter_provider_udemy/screens/edit_product_screen.dart';
 import 'package:flutter_provider_udemy/screens/order_screen.dart';
 import 'package:flutter_provider_udemy/screens/product_detail_Screen.dart';
 import 'package:flutter_provider_udemy/screens/product_overview_screens.dart';
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
           CartScreen.routeName: (ctx) => CartScreen(),
           OrderScreen.routeName: (ctx) => OrderScreen(),
           UserProductScreen.routename:(ctx) => UserProductScreen(),
+          EditProductScreen.routeName:(ctx)=> EditProductScreen()
         },
       ),
     );
